@@ -9,13 +9,13 @@ public class ChestInteractable : MonoBehaviour, IInteractable {
     [SerializeField] private int pesosAmount;
     [SerializeField] private string interactText;
 
-    bool collectable = true;
+    bool isInteractable = true;
 
     private void CollectChest() {
-        if(collectable) {
-            collectable = false;
+        if(isInteractable) {
             chestGameObject.GetComponent<SpriteRenderer>().sprite = emptyChestSprite;
             Debug.Log("Grant " + pesosAmount + " pesos!");
+            isInteractable = false;
         }
     }
 
@@ -28,5 +28,7 @@ public class ChestInteractable : MonoBehaviour, IInteractable {
     public Transform GetTransform() {
         return transform;
     }
-
+    public bool IsInteractable() {
+        return isInteractable;
+    }
 }

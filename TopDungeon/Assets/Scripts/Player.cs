@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
         List<IInteractable> interactableList = new List<IInteractable>();
         Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, interactRange);
         foreach(Collider2D collider in colliderArray) {
-            if(collider.TryGetComponent(out IInteractable interactable)) {
+            if((collider.TryGetComponent(out IInteractable interactable)) && (interactable.IsInteractable() == true)) {
                 interactableList.Add(interactable);
             }
         }

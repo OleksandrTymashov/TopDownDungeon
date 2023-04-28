@@ -73,6 +73,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Talk with Bob
+  isInteractable: 1
+  dialogue:
+    name: Bob
+    sprite: {fileID: -1465250054, guid: ae78c69300d268048905dbc7005fc417, type: 3}
+    sentences: []
 --- !u!1 &1808263900939181000
 GameObject:
   m_ObjectHideFlags: 0

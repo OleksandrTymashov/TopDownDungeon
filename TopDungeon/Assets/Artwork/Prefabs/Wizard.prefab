@@ -157,3 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Talk with  red wizard
+  isInteractable: 1
+  dialogue:
+    name: Red wizard
+    sprite: {fileID: 497289009, guid: ae78c69300d268048905dbc7005fc417, type: 3}
+    sentences: []
